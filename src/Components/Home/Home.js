@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { CardGroup } from 'react-bootstrap';
 import Country from '../Country/Country';
 
 const Home = () => {
@@ -11,9 +12,11 @@ const Home = () => {
     return (
         <div>
             <h2><span style={{color:'red'}}>Total Countries: </span>{countries.length}</h2>
-                {
+            <div style={{display:'inline-grid'}}>
+               {
                     countries.map(country => <Country country={country}></Country>)
                 }
+               </div>
         </div>
     );
 };
